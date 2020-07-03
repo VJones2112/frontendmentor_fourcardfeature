@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/*I put the entire page in a div class named wrapper.*/
+.wrapper {
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 98%);
+    width: 375px;
+    /*min-height: 100vh;*/
+}
+
+/*I put the top three pararaphs in a div named header.*/
+.header {
+    text-align: center;
+    padding-bottom: 3rem;
+    width: 82%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.header .light {
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+    margin-top: 5px;
+}
+
+/*I put the cards in a div named features so that I can flexbox them differently in mobile vs. desktop.*/
+.features {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    box-shadow: 10px 10px 15px 0 rgba(204, 179, 204, 1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.card img {
+    align-self: flex-end;
+    padding-top: 1rem;
+}
+
+h1,
+h2 {
+    color: hsl(234, 12%, 34%);
+    margin: 0;
+}
+
+.supervisor {
+    border-top: 5px solid hsl(180, 62%, 55%);
+    margin-bottom: 2.5rem;
+}
+
+.team {
+    border-top: 5px solid hsl(0, 78%, 62%);
+    margin-bottom: 2.5rem;
+}
+
+.karma {
+    border-top: 5px solid hsl(34, 97%, 64%);
+    margin-bottom: 2.5rem;
+}
+
+.calc {
+    border-top: 5px solid hsl(212, 86%, 64%);
+    margin-bottom: 2.5rem;
+}
+
+footer {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: hsl(229, 6%, 66%);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*Below is the desktop styling.*/
+@media screen and (min-width:900px) {
+
+    .wrapper {
+        max-width: 1440px;
+        min-width: 1000px;
+    }
+
+    .header {
+        max-width: 450px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .supervisor {
+        width: 250px;
+    }
+
+    .team,
+    .karma {
+        width: 250px;
+    }
+
+    .calc {
+        width: 250px;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+}
